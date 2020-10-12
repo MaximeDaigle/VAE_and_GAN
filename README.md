@@ -7,7 +7,7 @@ Content
 
 #### [Bonus theoretical content](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/theoretical_generative.pdf) touching:
 * Autoregressive models 
-* Reparamete-rization trick 
+* Reparameterization trick 
 * Variational autoencoders (VAE)
 * Normalizing flows 
 * Generative adversarial networks (GANs)
