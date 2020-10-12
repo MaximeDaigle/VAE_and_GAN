@@ -5,8 +5,12 @@ Content
 2. Implementation of a [**WGAN**](https://github.com/MaximeDaigle/)
 3. Training of the WGAN on Street View House Numbers
 
-#### [Bonus theoretical content](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/theoretical_generative.pdf) including:
-* 
+#### [Bonus theoretical content](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/theoretical_generative.pdf) touching:
+* Autoregressive models 
+* Reparamete-rization trick 
+* Variational autoencoders (VAE)
+* Normalizing flows 
+* Generative adversarial networks (GANs)
 
 
 
