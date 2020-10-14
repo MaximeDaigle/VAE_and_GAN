@@ -23,11 +23,17 @@ Variational Autoencoders (VAEs) are probabilistic generative models to model dat
 ## GAN's Comparison
 Generative Adversarial Network (GAN) enables the estimation of distributional measure between arbitrary empirical distributions. This Section implements a function to estimate the Squared Hellinger as well as one to estimate the Earth mover distance. This allows to look at and contrast some properties of the [f-divergence](https://arxiv.org/abs/1606.00709) and the Earth-Mover distance ([Wasserstein GAN](https://arxiv.org/abs/1701.07875)).
 
-<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/squared_hellinger.png" alt="squared hellinger" width="700"/>
+#### squared hellinger
 
-<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Wasserstein.png" alt="wasserstein" width="600"/>
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/squared_hellinger.png" alt="squared hellinger" width="650"/>
 
-<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Lipschitz.png" alt="lipschitz" width="600"/>
+#### Wasserstein
+
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Wasserstein.png" alt="wasserstein" width="550"/>
+
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Lipschitz.png" alt="lipschitz" width="550"/>
+
+#### Comparison
 
 ![comparison](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/comparison.png)
 
@@ -101,88 +107,3 @@ Best Validation PPL for each experiment
 ## Comparison of generated samples 
 
 ![generation_eq1](https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/generation_eq.png)
-
-Best three (all from the GRU model):
-
-1.  nov. N N `<eos>` the company said it will redeem \$ N million of
-    assets and N N of the N N convertible subordinated debentures due
-    nov. N N `<eos>` the notes are rated triple-a
-
-2.  N N `<eos>` the key rate of the bills was quoted at N N to yield N
-    N `<eos>` the N N N notes due N was N N to N N N to yield
-
-3.  macy & co. said it agreed to acquire its N N stake in the u.s. and
-    `<unk>` concern `<eos>` the company said it will sell its N N
-    stake in the u.s. and N N
-
-Three interesting:
-
-1.  sachs & co. and salomon brothers inc `<eos>` the move is a
-    `<unk>` of the `<unk>` of the `<unk>` `<unk>` of the
-    `<unk>` `<unk>` of the `<unk>` `<unk>` `<eos>` the
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` and `<unk>` `<unk>`
-    `<eos>` the `<unk>` of the `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` and\
-    It starts promising, but quickly gets in a loop and deteriorates.
-
-2.  at par to yield N N `<eos>` the N N N notes due N fell N to N N to
-    yield N N `<eos>` the N N N notes due N fell N to N N to yield N N
-    `<eos>` the N N N notes due N fell N to N N to yield N N `<eos>`
-    the N N N notes due N fell N to N N\
-    The words generated are good, but it gets stuck in a loop.
-
-3.  n't be able to pay the debt `<eos>` the company said it would n't
-    identify the offer `<eos>` the company said it would n't elaborate
-    `<eos>` the company said it would n't elaborate `<eos>` the
-    company said it would n't elaborate `<eos>` the company said it
-    would n't elaborate `<eos>` the company said it would n't
-    elaborate `<eos>` the company said it will sell its stake in
-    navigation mixte to\
-    It gets stuck in a loop, but, eventually, gets out of it.
-
-Worst three:
-
-1.  and `<unk>` `<unk>` `<eos>` the `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` and `<unk>` `<unk>` `<eos>` the
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` and `<unk>` `<unk>`
-    `<eos>` the `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` and `<unk>`
-    `<unk>` `<eos>` the
-
-2.  of the `<unk>` `<eos>` the `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<eos>` the `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<eos>` the `<unk>` `<unk>` `<unk>`
-    `<unk>`
-
-3.  `<eos>` but the company 's `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<eos>` the `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<eos>` the `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<eos>` the `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<eos>` the
-    `<unk>` `<unk>` `<unk>` `<unk>` `<unk>` `<unk>`
-    `<unk>` `<unk>` `<unk>` `<eos>` the `<unk>` `<unk>`
-    `<unk>` `<unk>`
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
