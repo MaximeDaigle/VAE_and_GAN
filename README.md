@@ -38,72 +38,36 @@ Generative Adversarial Network (GAN) enables the estimation of distributional me
 ![comparison](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/comparison.png)
 
 
-## Training
+## WGAN
 
-The sequential language models are trained on the
-Penn Treebank dataset. Language models learn to assign a likelihood to
-sequences of text. The elements of the sequence (typically words or
-individual characters) are called tokens, and can be represented as
-one-hot vectors with length equal to the vocabulary size, e.g. 26 for a
-vocabulary of English letters with no punctuation or spaces, in the case
-of characters, or as indices in the vocabulary for words. In this
-representation an entire dataset (or a mini-batch of examples) can be
-represented by a 3-dimensional tensor, with axes corresponding to: (1)
-the example within the dataset/mini-batch, (2) the time-step within the
-sequence, and (3) the index of the token in the vocabulary. Sequential
-language models do next-step prediction, in other words, they
-predict tokens in a sequence one at a time, with each prediction based
-on all the previous elements of the sequence. A trained sequential
-language model can also be used to generate new sequences of text, by
-making each prediction conditioned on the past *predictions* (instead of
-the ground-truth input sequence).
+Train a generator to generate a distribution of images of size 32x32x3, namely the Street View House Numbers dataset (SVHN). The SVHN dataset can be downloaded [here](http://ufldl.stanford.edu/housenumbers/). The prior distribution considered is the isotropic gaussian distribution (p(z) = N(0, I)).
 
-#### The Penn Treebank Dataset
+#### Street View House Numbers
 
-This is a dataset of about 1 million words from about 2,500 stories from
-the Wall Street Journal. It has Part-of-Speech annotations and is
-sometimes used for training parsers, but it's also a very common
-benchmark dataset for training RNNs and other sequence models to do
-next-step prediction.
+#### Visual samples
 
-#### Preprocessing
+![comparison](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/visual_samples.png)
 
-The version of the dataset you will work with has been preprocessed:
-lower-cased, stripped of non-alphabetic characters, tokenized (broken up
-into words, with sentences separated by the `<eos>` (end of sequence)
-token), and cut down to a vocabulary of 10,000 words; any word not in
-this vocabulary is replaced by `<unk>`. For the transformer network,
-positional information (an embedding of the position in the source
-sequence) for each token is also included in the input sequence.
+#### Exploration of the latent space
+We look if the model has learned a disentangled representation in the latent space. A random z is sampled from the prior distribution. Some small perturbations are added to the sample z for each dimension (e.g.  for a dimension i, z_i = z_i + \epsilon). The samples are perturbed with 10 progressivily increasing values of \epsilon in (-5, -4, -3, -2, -1,  0,  1,  2,  3,  4) where \epsilon = 0 is the original sample. 
 
-#### Loss
+Using a sample showing a 9, we see at Figure 3 that the perturbation can transform the 9 into a 'R', 2, 3, and a 8.
 
-Unlike in classification problems, where the performance metric is
-typically accuracy, in language modelling, the performance metric is
-typically based directly on the cross-entropy loss, i.e. the negative
-log-likelihood ($NLL$) the model assigns to the tokens. For word-level
-language modelling it is standard to report **perplexity (PPL)**, which
-is the exponentiated average per-token NLL (over all tokens):
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/fig3.png" alt="fig3" width="600"/>
 
-<img src="https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/ppl_eq.png" alt="ppl eq" width="400"/>
+Similarly, a sample showing 2 can be turned into a 3 or 8
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/fig4.png" alt="fig4" width="600"/>
 
-where t is the index with the sequence, and n indexes different
-sequences. For Penn Treebank in particular, the test set is treated as a
-single sequence (i.e. N=1). The purpose of this part is to perform
-model exploration.
+and the reverse is possible where a sample showing 3 can be transformed to a 2.
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/fig5.png" alt="fig5" width="600"/>
 
-#### Results
+Finally, an interesting transformation found was that the perturbation could affect the thickness of the number.
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/fig6.png" alt="fig6" width="600"/>
 
-The three architectures are trained using either stochastic gradient
-descent or the ADAM optimizer. The training loop is provided in
-*run\_exp.py*. For each experiment (3.1, 3.2, 3.3, 3.4), the learning
-curves (train and validation) of PPL over both epochs and
-wall-clock-time are in the folder images.
+#### Interpolating in the data space vs in the latent space
 
-![Best Validation PPL for each experiment](images/table_result.png)
-Best Validation PPL for each experiment
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/interpolation.png" alt="lipschitz" width="750"/>
 
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/fig7-8.png" alt="fig7-8" width="600"/>
 
-## Comparison of generated samples 
-
-![generation_eq1](https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/generation_eq.png)
+The  difference  between  both  interpolations  is  that  (b)  is  only  overlapping  two  images  and gradually changing their transparency.  It does not show intermediate images between z_0 and z_1.  It fades z_0 into z_1 without changing the shapes contained.  (a) uses the generator to create intermediary images between z_0 and z_1. It gradually generates images closer to z_1 in the latent space and farther to z_0.  It is closer to showing how z_0 can morph into z_1.
