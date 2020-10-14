@@ -93,8 +93,6 @@ if __name__ == '__main__':
     optim_critic.load_state_dict(checkpoint['optim_critic'])
     optim_generator.load_state_dict(checkpoint['optim_generator'])
 
-    critic.train()
-    generator.train()
 
     for i in range(n_iter*n_critic_updates):
         generator.train()
