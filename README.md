@@ -1,9 +1,10 @@
 # VAE and GAN
 
 Content
-1. Implementation of a [**VAE**](https://github.com/MaximeDaigle/)
-2. Implementation of a [**WGAN**](https://github.com/MaximeDaigle/)
-3. Training of the WGAN on Street View House Numbers
+1. Implementation of a **VAE**
+2. Comparison of a GAN trained with Squared Hellinger distance vs Wasserstein distance 
+3. Implementation of a **WGAN**
+4. Training of the WGAN on Street View House Numbers
 
 #### [Bonus theoretical content](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/theoretical_generative.pdf) touching:
 * Autoregressive models 
