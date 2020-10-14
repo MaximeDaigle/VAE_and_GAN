@@ -1,0 +1,433 @@
+Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.7.4'
+New python executable in /localscratch/daiglema.7115050.0/env/bin/python
+Installing setuptools, pip, wheel...
+done.
+/localscratch/daiglema.7115050.0
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx512, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Collecting torch
+Collecting future (from torch)
+Collecting numpy (from torch)
+Installing collected packages: future, numpy, torch
+Successfully installed future-0.17.1 numpy-1.18.1 torch-1.5.0
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx512, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Collecting torchvision
+Collecting pillow-simd>=4.1.1 (from torchvision)
+Collecting six (from torchvision)
+Requirement already satisfied: numpy in /localscratch/daiglema.7115050.0/env/lib/python3.7/site-packages (from torchvision) (1.18.1)
+Requirement already satisfied: torch in /localscratch/daiglema.7115050.0/env/lib/python3.7/site-packages (from torchvision) (1.5.0)
+Requirement already satisfied: future in /localscratch/daiglema.7115050.0/env/lib/python3.7/site-packages (from torch->torchvision) (0.17.1)
+Installing collected packages: pillow-simd, six, torchvision
+Successfully installed pillow-simd-7.0.0.post3 six-1.14.0 torchvision-0.5.0
+Ignoring pip: markers 'python_version < "3"' don't match your environment
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx512, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Collecting scipy
+Requirement already satisfied: numpy>=1.13.3 in /localscratch/daiglema.7115050.0/env/lib/python3.7/site-packages (from scipy) (1.18.1)
+Installing collected packages: scipy
+Successfully installed scipy-1.4.1
+
+Calling python train script.
+Using downloaded and verified file: ./train_32x32.mat
+Using downloaded and verified file: ./train_32x32.mat
+Using downloaded and verified file: ./test_32x32.mat
+
+Iteration 0
+            Avg Critic loss: 9.262042510727042e-08  Avg generator loss: 3.382512545613281e-07  Penalty: 0.0
+Validation: Avg Critic loss: -3.80706062230729e-08  Avg generator loss: -5.8930254454026e-08
+
+Iteration 500
+            Avg Critic loss: -45.08683776855469  Avg generator loss: 0.5388841032981873  Penalty: 14.89279842376709
+Validation: Avg Critic loss: -48.28825759887695  Avg generator loss: 0.3134499192237854
+
+Iteration 1000
+            Avg Critic loss: -35.83307647705078  Avg generator loss: -0.7580791711807251  Penalty: 14.009980201721191
+Validation: Avg Critic loss: -38.952308654785156  Avg generator loss: -1.039353847503662
+
+Iteration 1500
+            Avg Critic loss: -25.1856746673584  Avg generator loss: -5.479859828948975  Penalty: 8.940322875976562
+Validation: Avg Critic loss: -26.92268180847168  Avg generator loss: -5.699085235595703
+
+Iteration 2000
+            Avg Critic loss: -19.186527252197266  Avg generator loss: -12.547144889831543  Penalty: 7.774988651275635
+Validation: Avg Critic loss: -22.12136459350586  Avg generator loss: -12.714466094970703
+
+Iteration 2500
+            Avg Critic loss: -13.404919624328613  Avg generator loss: -10.377901077270508  Penalty: 5.448591709136963
+Validation: Avg Critic loss: -15.0208101272583  Avg generator loss: -10.567496299743652
+
+Iteration 3000
+            Avg Critic loss: -10.816638946533203  Avg generator loss: -8.908207893371582  Penalty: 4.546629428863525
+Validation: Avg Critic loss: -12.16724967956543  Avg generator loss: -9.095037460327148
+
+Iteration 3500
+            Avg Critic loss: -10.98338794708252  Avg generator loss: -7.330296039581299  Penalty: 4.343646049499512
+Validation: Avg Critic loss: -11.385296821594238  Avg generator loss: -7.495972633361816
+
+Iteration 4000
+            Avg Critic loss: -9.201025009155273  Avg generator loss: -7.801967620849609  Penalty: 3.7401046752929688
+Validation: Avg Critic loss: -9.71650505065918  Avg generator loss: -7.980699062347412
+
+Iteration 4500
+            Avg Critic loss: -8.668869972229004  Avg generator loss: -9.313708305358887  Penalty: 3.383955240249634
+Validation: Avg Critic loss: -8.886595726013184  Avg generator loss: -9.470426559448242
+
+Iteration 5000
+            Avg Critic loss: -7.970793724060059  Avg generator loss: -8.507644653320312  Penalty: 3.2012481689453125
+Validation: Avg Critic loss: -7.858973503112793  Avg generator loss: -8.663128852844238
+
+Iteration 5500
+            Avg Critic loss: -7.459602355957031  Avg generator loss: -8.104063987731934  Penalty: 2.876847267150879
+Validation: Avg Critic loss: -7.85063362121582  Avg generator loss: -8.256750106811523
+
+Iteration 6000
+            Avg Critic loss: -7.480764865875244  Avg generator loss: -8.737628936767578  Penalty: 2.8476176261901855
+Validation: Avg Critic loss: -7.850936412811279  Avg generator loss: -8.871665000915527
+
+Iteration 6500
+            Avg Critic loss: -7.63615608215332  Avg generator loss: -8.904671669006348  Penalty: 2.9326882362365723
+Validation: Avg Critic loss: -7.807615756988525  Avg generator loss: -9.006356239318848
+
+Iteration 7000
+            Avg Critic loss: -7.585545539855957  Avg generator loss: -8.583019256591797  Penalty: 2.8724279403686523
+Validation: Avg Critic loss: -8.0733642578125  Avg generator loss: -8.713374137878418
+
+Iteration 7500
+            Avg Critic loss: -7.7120161056518555  Avg generator loss: -8.665185928344727  Penalty: 2.9529030323028564
+Validation: Avg Critic loss: -7.681260108947754  Avg generator loss: -8.783467292785645
+
+Iteration 8000
+            Avg Critic loss: -7.16890287399292  Avg generator loss: -9.216360092163086  Penalty: 2.7772724628448486
+Validation: Avg Critic loss: -7.433414459228516  Avg generator loss: -9.32826042175293
+
+Iteration 8500
+            Avg Critic loss: -7.155425071716309  Avg generator loss: -9.348736763000488  Penalty: 2.858851432800293
+Validation: Avg Critic loss: -7.358191013336182  Avg generator loss: -9.448684692382812
+
+Iteration 9000
+            Avg Critic loss: -6.650576114654541  Avg generator loss: -8.855722427368164  Penalty: 2.712908983230591
+Validation: Avg Critic loss: -6.7339959144592285  Avg generator loss: -8.960801124572754
+
+Iteration 9500
+            Avg Critic loss: -6.390420913696289  Avg generator loss: -8.967966079711914  Penalty: 2.529662609100342
+Validation: Avg Critic loss: -6.478898525238037  Avg generator loss: -9.078991889953613
+
+Iteration 10000
+            Avg Critic loss: -6.65245246887207  Avg generator loss: -9.213871002197266  Penalty: 2.5554440021514893
+Validation: Avg Critic loss: -7.326148986816406  Avg generator loss: -9.312738418579102
+
+Iteration 10500
+            Avg Critic loss: -6.086121082305908  Avg generator loss: -8.954106330871582  Penalty: 2.427809476852417
+Validation: Avg Critic loss: -6.598719120025635  Avg generator loss: -9.060951232910156
+
+Iteration 11000
+            Avg Critic loss: -5.923190116882324  Avg generator loss: -9.01035213470459  Penalty: 2.3289051055908203
+Validation: Avg Critic loss: -6.146120071411133  Avg generator loss: -9.098396301269531
+
+Iteration 11500
+            Avg Critic loss: -5.622602462768555  Avg generator loss: -9.345878601074219  Penalty: 2.322100877761841
+Validation: Avg Critic loss: -6.305909633636475  Avg generator loss: -9.42788314819336
+
+Iteration 12000
+            Avg Critic loss: -5.678373336791992  Avg generator loss: -9.352036476135254  Penalty: 2.2155916690826416
+Validation: Avg Critic loss: -5.554415225982666  Avg generator loss: -9.445313453674316
+
+Iteration 12500
+            Avg Critic loss: -5.326277732849121  Avg generator loss: -9.664937973022461  Penalty: 2.103367567062378
+Validation: Avg Critic loss: -5.514349937438965  Avg generator loss: -9.771563529968262
+
+Iteration 13000
+            Avg Critic loss: -5.2923455238342285  Avg generator loss: -9.640081405639648  Penalty: 2.0580761432647705
+Validation: Avg Critic loss: -5.339688301086426  Avg generator loss: -9.71610164642334
+
+Iteration 13500
+            Avg Critic loss: -4.90805196762085  Avg generator loss: -9.091465950012207  Penalty: 1.962731957435608
+Validation: Avg Critic loss: -5.275583267211914  Avg generator loss: -9.176850318908691
+
+Iteration 14000
+            Avg Critic loss: -4.477602005004883  Avg generator loss: -8.597931861877441  Penalty: 2.1176133155822754
+Validation: Avg Critic loss: -4.5929951667785645  Avg generator loss: -8.672536849975586
+
+Iteration 14500
+            Avg Critic loss: -4.855145454406738  Avg generator loss: -8.63774299621582  Penalty: 1.9504626989364624
+Validation: Avg Critic loss: -4.515817165374756  Avg generator loss: -8.739583015441895
+
+Iteration 15000
+            Avg Critic loss: -4.586218357086182  Avg generator loss: -8.714686393737793  Penalty: 1.8292890787124634
+Validation: Avg Critic loss: -4.887465000152588  Avg generator loss: -8.807095527648926
+
+Iteration 15500
+            Avg Critic loss: -4.682411193847656  Avg generator loss: -8.09043025970459  Penalty: 1.9065473079681396
+Validation: Avg Critic loss: -4.535709857940674  Avg generator loss: -8.177501678466797
+
+Iteration 16000
+            Avg Critic loss: -4.629944324493408  Avg generator loss: -8.60615062713623  Penalty: 1.8561900854110718
+Validation: Avg Critic loss: -4.407458305358887  Avg generator loss: -8.717692375183105
+
+Iteration 16500
+            Avg Critic loss: -4.777832508087158  Avg generator loss: -8.341815948486328  Penalty: 1.9310097694396973
+Validation: Avg Critic loss: -4.337516784667969  Avg generator loss: -8.440500259399414
+
+Iteration 17000
+            Avg Critic loss: -4.416444778442383  Avg generator loss: -8.223896980285645  Penalty: 1.7405474185943604
+Validation: Avg Critic loss: -3.9991812705993652  Avg generator loss: -8.309856414794922
+
+Iteration 17500
+            Avg Critic loss: -4.3582634925842285  Avg generator loss: -8.458613395690918  Penalty: 1.6901284456253052
+Validation: Avg Critic loss: -4.464155673980713  Avg generator loss: -8.546037673950195
+
+Iteration 18000
+            Avg Critic loss: -4.6497344970703125  Avg generator loss: -9.243426322937012  Penalty: 1.7942607402801514
+Validation: Avg Critic loss: -4.4532036781311035  Avg generator loss: -9.336883544921875
+
+Iteration 18500
+            Avg Critic loss: -4.140968322753906  Avg generator loss: -10.441261291503906  Penalty: 1.7432680130004883
+Validation: Avg Critic loss: -4.30613899230957  Avg generator loss: -10.517999649047852
+
+Iteration 19000
+            Avg Critic loss: -4.265054225921631  Avg generator loss: -9.638461112976074  Penalty: 1.6436183452606201
+Validation: Avg Critic loss: -4.529751777648926  Avg generator loss: -9.721810340881348
+
+Iteration 19500
+            Avg Critic loss: -4.415698051452637  Avg generator loss: -9.736648559570312  Penalty: 1.7662174701690674
+Validation: Avg Critic loss: -4.223843097686768  Avg generator loss: -9.812480926513672
+
+Iteration 20000
+            Avg Critic loss: -4.263894557952881  Avg generator loss: -10.055441856384277  Penalty: 1.684231162071228
+Validation: Avg Critic loss: -4.14708137512207  Avg generator loss: -10.141100883483887
+
+Iteration 20500
+            Avg Critic loss: -4.348266124725342  Avg generator loss: -9.658600807189941  Penalty: 1.6998543739318848
+Validation: Avg Critic loss: -3.8901519775390625  Avg generator loss: -9.751651763916016
+
+Iteration 21000
+            Avg Critic loss: -4.291471481323242  Avg generator loss: -9.314412117004395  Penalty: 1.7766146659851074
+Validation: Avg Critic loss: -4.4841132164001465  Avg generator loss: -9.415407180786133
+
+Iteration 21500
+            Avg Critic loss: -4.311468601226807  Avg generator loss: -8.957291603088379  Penalty: 1.715117335319519
+Validation: Avg Critic loss: -4.488087177276611  Avg generator loss: -9.027496337890625
+
+Iteration 22000
+            Avg Critic loss: -4.47119140625  Avg generator loss: -9.130171775817871  Penalty: 1.7500687837600708
+Validation: Avg Critic loss: -4.190596580505371  Avg generator loss: -9.202557563781738
+
+Iteration 22500
+            Avg Critic loss: -4.473254203796387  Avg generator loss: -9.467611312866211  Penalty: 1.7254127264022827
+Validation: Avg Critic loss: -4.558567047119141  Avg generator loss: -9.549098014831543
+
+Iteration 23000
+            Avg Critic loss: -4.596746921539307  Avg generator loss: -9.625160217285156  Penalty: 1.821169376373291
+Validation: Avg Critic loss: -4.819931983947754  Avg generator loss: -9.706826210021973
+
+Iteration 23500
+            Avg Critic loss: -4.510689735412598  Avg generator loss: -9.933014869689941  Penalty: 1.8808554410934448
+Validation: Avg Critic loss: -4.376943111419678  Avg generator loss: -10.013164520263672
+
+Iteration 24000
+            Avg Critic loss: -4.172486782073975  Avg generator loss: -9.889106750488281  Penalty: 1.6380622386932373
+Validation: Avg Critic loss: -4.389433860778809  Avg generator loss: -9.965531349182129
+
+Iteration 24500
+            Avg Critic loss: -4.4130024909973145  Avg generator loss: -9.409623146057129  Penalty: 1.7331167459487915
+Validation: Avg Critic loss: -4.428581714630127  Avg generator loss: -9.50804615020752
+
+Iteration 25000
+            Avg Critic loss: -4.047915458679199  Avg generator loss: -9.415056228637695  Penalty: 1.5785763263702393
+Validation: Avg Critic loss: -4.025308609008789  Avg generator loss: -9.491060256958008
+
+Iteration 25500
+            Avg Critic loss: -4.288638114929199  Avg generator loss: -9.168654441833496  Penalty: 1.7080748081207275
+Validation: Avg Critic loss: -3.9483516216278076  Avg generator loss: -9.257135391235352
+
+Iteration 26000
+            Avg Critic loss: -3.9668326377868652  Avg generator loss: -9.035364151000977  Penalty: 1.5755822658538818
+Validation: Avg Critic loss: -3.678900718688965  Avg generator loss: -9.112236022949219
+
+Iteration 26500
+            Avg Critic loss: -3.736701011657715  Avg generator loss: -9.104548454284668  Penalty: 1.4552874565124512
+Validation: Avg Critic loss: -4.159126281738281  Avg generator loss: -9.172762870788574
+
+Iteration 27000
+            Avg Critic loss: -3.9143338203430176  Avg generator loss: -8.757546424865723  Penalty: 1.5384842157363892
+Validation: Avg Critic loss: -4.02856969833374  Avg generator loss: -8.819602012634277
+
+Iteration 27500
+            Avg Critic loss: -3.5564868450164795  Avg generator loss: -9.132020950317383  Penalty: 1.3552428483963013
+Validation: Avg Critic loss: -3.6848981380462646  Avg generator loss: -9.189764976501465
+
+Iteration 28000
+            Avg Critic loss: -3.9972949028015137  Avg generator loss: -9.400980949401855  Penalty: 1.600340723991394
+Validation: Avg Critic loss: -4.307563781738281  Avg generator loss: -9.456270217895508
+
+Iteration 28500
+            Avg Critic loss: -3.847411870956421  Avg generator loss: -9.813634872436523  Penalty: 1.482790231704712
+Validation: Avg Critic loss: -4.031550884246826  Avg generator loss: -9.880311012268066
+
+Iteration 29000
+            Avg Critic loss: -4.020719051361084  Avg generator loss: -10.145695686340332  Penalty: 1.5849357843399048
+Validation: Avg Critic loss: -3.6739532947540283  Avg generator loss: -10.23293685913086
+
+Iteration 29500
+            Avg Critic loss: -3.684041976928711  Avg generator loss: -10.125388145446777  Penalty: 1.4190207719802856
+Validation: Avg Critic loss: -3.867124319076538  Avg generator loss: -10.185003280639648
+
+Iteration 30000
+            Avg Critic loss: -3.6209816932678223  Avg generator loss: -9.853379249572754  Penalty: 1.368760108947754
+Validation: Avg Critic loss: -3.449977159500122  Avg generator loss: -9.917373657226562
+
+Iteration 30500
+            Avg Critic loss: -3.377866268157959  Avg generator loss: -9.331836700439453  Penalty: 1.3578721284866333
+Validation: Avg Critic loss: -3.072005033493042  Avg generator loss: -9.412870407104492
+
+Iteration 31000
+            Avg Critic loss: -3.155716896057129  Avg generator loss: -8.332438468933105  Penalty: 1.2868155241012573
+Validation: Avg Critic loss: -3.0532925128936768  Avg generator loss: -8.404311180114746
+
+Iteration 31500
+            Avg Critic loss: -3.2691903114318848  Avg generator loss: -7.689732074737549  Penalty: 1.2626848220825195
+Validation: Avg Critic loss: -3.008181571960449  Avg generator loss: -7.758914470672607
+
+Iteration 32000
+            Avg Critic loss: -3.099651336669922  Avg generator loss: -7.177982807159424  Penalty: 1.2152345180511475
+Validation: Avg Critic loss: -2.7384650707244873  Avg generator loss: -7.2366437911987305
+
+Iteration 32500
+            Avg Critic loss: -3.2336370944976807  Avg generator loss: -7.383626937866211  Penalty: 1.2480714321136475
+Validation: Avg Critic loss: -2.836599111557007  Avg generator loss: -7.434543609619141
+
+Iteration 33000
+            Avg Critic loss: -2.875094413757324  Avg generator loss: -7.366688251495361  Penalty: 1.0462756156921387
+Validation: Avg Critic loss: -2.804807186126709  Avg generator loss: -7.42567777633667
+
+Iteration 33500
+            Avg Critic loss: -2.9140024185180664  Avg generator loss: -6.929409980773926  Penalty: 1.0101312398910522
+Validation: Avg Critic loss: -2.807361364364624  Avg generator loss: -6.981285095214844
+
+Iteration 34000
+            Avg Critic loss: -2.858625650405884  Avg generator loss: -6.767507553100586  Penalty: 0.9620792269706726
+Validation: Avg Critic loss: -2.85414981842041  Avg generator loss: -6.83596134185791
+
+Iteration 34500
+            Avg Critic loss: -2.836362838745117  Avg generator loss: -6.361604690551758  Penalty: 1.006085753440857
+Validation: Avg Critic loss: -2.5578083992004395  Avg generator loss: -6.427089214324951
+
+Iteration 35000
+            Avg Critic loss: -2.8125174045562744  Avg generator loss: -5.961894512176514  Penalty: 0.9623028635978699
+Validation: Avg Critic loss: -2.9727303981781006  Avg generator loss: -6.022976398468018
+
+Iteration 35500
+            Avg Critic loss: -2.671330213546753  Avg generator loss: -5.71881628036499  Penalty: 0.860527753829956
+Validation: Avg Critic loss: -2.5801050662994385  Avg generator loss: -5.7812180519104
+
+Iteration 36000
+            Avg Critic loss: -2.674506902694702  Avg generator loss: -5.58051061630249  Penalty: 0.8890519738197327
+Validation: Avg Critic loss: -2.4450647830963135  Avg generator loss: -5.637961387634277
+
+Iteration 36500
+            Avg Critic loss: -2.7457096576690674  Avg generator loss: -5.345601558685303  Penalty: 0.896791398525238
+Validation: Avg Critic loss: -2.7611703872680664  Avg generator loss: -5.3941731452941895
+
+Iteration 37000
+            Avg Critic loss: -2.6966423988342285  Avg generator loss: -5.374567985534668  Penalty: 0.8640495538711548
+Validation: Avg Critic loss: -2.667875051498413  Avg generator loss: -5.428132057189941
+
+Iteration 37500
+            Avg Critic loss: -2.682562828063965  Avg generator loss: -5.444827556610107  Penalty: 0.8233106136322021
+Validation: Avg Critic loss: -3.018285036087036  Avg generator loss: -5.4954657554626465
+
+Iteration 38000
+            Avg Critic loss: -2.7076709270477295  Avg generator loss: -5.242334842681885  Penalty: 0.8393795490264893
+Validation: Avg Critic loss: -2.6743860244750977  Avg generator loss: -5.2946624755859375
+
+Iteration 38500
+            Avg Critic loss: -2.685749053955078  Avg generator loss: -5.301061153411865  Penalty: 0.860160231590271
+Validation: Avg Critic loss: -2.7332255840301514  Avg generator loss: -5.350409030914307
+
+Iteration 39000
+            Avg Critic loss: -2.75764799118042  Avg generator loss: -5.003776550292969  Penalty: 0.877047598361969
+Validation: Avg Critic loss: -2.735079288482666  Avg generator loss: -5.055729866027832
+
+Iteration 39500
+            Avg Critic loss: -2.6714141368865967  Avg generator loss: -4.923417568206787  Penalty: 0.8262333273887634
+Validation: Avg Critic loss: -2.780426025390625  Avg generator loss: -4.972566604614258
+
+Iteration 40000
+            Avg Critic loss: -2.724194288253784  Avg generator loss: -5.264801979064941  Penalty: 0.8542477488517761
+Validation: Avg Critic loss: -2.7549452781677246  Avg generator loss: -5.312356948852539
+
+Iteration 40500
+            Avg Critic loss: -2.793322801589966  Avg generator loss: -5.411290645599365  Penalty: 0.9035146236419678
+Validation: Avg Critic loss: -2.69773006439209  Avg generator loss: -5.454779624938965
+
+Iteration 41000
+            Avg Critic loss: -2.7549164295196533  Avg generator loss: -5.626471042633057  Penalty: 0.8779849410057068
+Validation: Avg Critic loss: -2.6867611408233643  Avg generator loss: -5.682557582855225
+
+Iteration 41500
+            Avg Critic loss: -2.8640263080596924  Avg generator loss: -5.774628162384033  Penalty: 0.9186597466468811
+Validation: Avg Critic loss: -2.768369436264038  Avg generator loss: -5.820672988891602
+
+Iteration 42000
+            Avg Critic loss: -2.756343126296997  Avg generator loss: -5.2973809242248535  Penalty: 0.9059974551200867
+Validation: Avg Critic loss: -2.3073031902313232  Avg generator loss: -5.348536014556885
+
+Iteration 42500
+            Avg Critic loss: -2.6781833171844482  Avg generator loss: -5.17375373840332  Penalty: 0.8541036248207092
+Validation: Avg Critic loss: -2.7512729167938232  Avg generator loss: -5.218644142150879
+
+Iteration 43000
+            Avg Critic loss: -2.5850095748901367  Avg generator loss: -4.850746154785156  Penalty: 0.8586720824241638
+Validation: Avg Critic loss: -2.6846907138824463  Avg generator loss: -4.892094612121582
+
+Iteration 43500
+            Avg Critic loss: -2.545056104660034  Avg generator loss: -4.368850231170654  Penalty: 0.8468930125236511
+Validation: Avg Critic loss: -2.5244526863098145  Avg generator loss: -4.420114517211914
+
+Iteration 44000
+            Avg Critic loss: -2.4218082427978516  Avg generator loss: -3.6916046142578125  Penalty: 0.9150243401527405
+Validation: Avg Critic loss: -2.1308929920196533  Avg generator loss: -3.7423202991485596
+
+Iteration 44500
+            Avg Critic loss: -2.279921770095825  Avg generator loss: -3.730104684829712  Penalty: 0.7129409313201904
+Validation: Avg Critic loss: -2.339698076248169  Avg generator loss: -3.77899432182312
+
+Iteration 45000
+            Avg Critic loss: -2.3548989295959473  Avg generator loss: -3.931619882583618  Penalty: 0.7380809187889099
+Validation: Avg Critic loss: -2.2944068908691406  Avg generator loss: -3.9759521484375
+
+Iteration 45500
+            Avg Critic loss: -2.3353114128112793  Avg generator loss: -4.010419845581055  Penalty: 0.7290663719177246
+Validation: Avg Critic loss: -2.2005364894866943  Avg generator loss: -4.056150913238525
+
+Iteration 46000
+            Avg Critic loss: -2.4982240200042725  Avg generator loss: -4.162894248962402  Penalty: 0.7986259460449219
+Validation: Avg Critic loss: -2.2955257892608643  Avg generator loss: -4.2239670753479
+
+Iteration 46500
+            Avg Critic loss: -2.447648763656616  Avg generator loss: -4.201723098754883  Penalty: 0.7603431344032288
+Validation: Avg Critic loss: -2.2448408603668213  Avg generator loss: -4.251483917236328
+
+Iteration 47000
+            Avg Critic loss: -2.4537994861602783  Avg generator loss: -4.397768974304199  Penalty: 0.7905986905097961
+Validation: Avg Critic loss: -2.3094921112060547  Avg generator loss: -4.452391624450684
+
+Iteration 47500
+            Avg Critic loss: -2.583217144012451  Avg generator loss: -4.49476957321167  Penalty: 0.8000351190567017
+Validation: Avg Critic loss: -2.4294958114624023  Avg generator loss: -4.549783706665039
+
+Iteration 48000
+            Avg Critic loss: -2.5810189247131348  Avg generator loss: -4.701356887817383  Penalty: 0.8697386980056763
+Validation: Avg Critic loss: -2.527923345565796  Avg generator loss: -4.748197078704834
+
+Iteration 48500
+            Avg Critic loss: -2.553173065185547  Avg generator loss: -4.726518630981445  Penalty: 0.852065920829773
+Validation: Avg Critic loss: -2.4443509578704834  Avg generator loss: -4.771923065185547
+
+Iteration 49000
+            Avg Critic loss: -2.4208133220672607  Avg generator loss: -3.861016273498535  Penalty: 0.8648545145988464
+Validation: Avg Critic loss: -2.154270648956299  Avg generator loss: -3.9105873107910156
+
+Iteration 49500
+            Avg Critic loss: -2.4213552474975586  Avg generator loss: -3.5597054958343506  Penalty: 0.7353746891021729
+Validation: Avg Critic loss: -2.3141396045684814  Avg generator loss: -3.6074061393737793
