@@ -19,37 +19,17 @@ Content
 
 Variational Autoencoders (VAEs) are probabilistic generative models to model data distribution p(x). In this section, a VAE is trained on the Binarised MNIST dataset, using the negative ELBO loss. Note that each pixel in this image dataset is binary: The pixel is either black or white, which means each datapoint (image) is a collection of binary values. The likelihood p<sub>&theta;</sub>(x|z), i.e. the decoder, is modelized as a product of bernoulli distributions.
 
-![gru equatiom](https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/gru_eq.png)
 
-Specifically about the implementation, it uses matrix and tensor
-operations (e.g. dot, multiply, add, etc.) to implement the recurrent
-unit calculations. It uses subclass `nn.module`, built-in Linear
-modules, and built-in implementations of nonlinearities (tanh, sigmoid,
-and softmax), initializations, loss functions, and optimization
-algorithms.
+## GAN's Comparison
+Generative Adversarial Network (GAN) enables the estimation of distributional measure between arbitrary empirical distributions. This Section implements a function to estimate the Squared Hellinger as well as one to estimate the Earth mover distance. This allows to look at and contrast some properties of the [f-divergence](https://arxiv.org/abs/1606.00709) and the Earth-Mover distance ([Wasserstein GAN](https://arxiv.org/abs/1701.07875)).
 
-## GAN
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/squared_hellinger.png" alt="squared hellinger" width="700"/>
 
-While prototypical RNNs "remember" past information by taking their
-previous hidden state as input at each step, recent years have seen a
-profusion of methodologies for making use of past information in
-different ways. The transformer is one such architecture which uses
-several self-attention networks ("heads") in parallel, among other
-architectural specifics. The transformer is quite complicated to
-implement compared to the RNNs described so far. The project uses
-open-source code to implements the different modules that are not the
-multi-head attention module (e.g. word embedding map, positional
-encoding, and mlp layers).
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Wasserstein.png" alt="wasserstein" width="600"/>
 
-![transformer_eq1](https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/transformer_eq1.png)
+<img src="https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/Lipschitz.png" alt="lipschitz" width="600"/>
 
-Note that the implementation of multi-head attention requires binary
-masks, so that attention is computed only over the past, not the future.
-A mask value of 1 indicates an element which the model is allowed to
-attend to (i.e. from the past); a value of 0 indicates an element it
-is not allowed to attend to. 
-
-![transformer_eq2](https://github.com/MaximeDaigle/transformer-scratch/blob/main/images/transformer_eq2.png)
+![comparison](https://github.com/MaximeDaigle/VAE_and_GAN/blob/main/images/comparison.png)
 
 
 ## Training
